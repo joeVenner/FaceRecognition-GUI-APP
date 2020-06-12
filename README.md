@@ -46,7 +46,7 @@ matches the selected user.
 Install the requirements and start the app .
 
 ```sh
-$ pip install -r requirements.txt
+$ pip install -r reqs.txt
 ```
 
 Run The App ...
