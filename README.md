@@ -21,19 +21,19 @@
 >![homepage](https://i.ibb.co/c62qvR2/home-page.png)
 
 ### Add a User 
->![homepage](https://i.ibb.co/t8gdq6s/adduser.png)
+>![homepage](https://i.ibb.co/t8gdq6s/adduser.png)<br>
 You should add the user name you want to train a classifier for 
 
 ### Capture Data and Train Classifier
->![homepage](https://i.ibb.co/D8JgYhN/capandtraindata.png)
+>![homepage](https://i.ibb.co/D8JgYhN/capandtraindata.png)<br>
 After adding user, now we should get enough data from the user 
 by pressing capture button, a webcam window will pop up and start capturing
 after it's done capturing now we should start Training the classifier.
 ### List of Our Users
 >![homepage](https://i.ibb.co/1KwfVVV/dropdown.png)
-here we have a list of all the users.
+<br>here we have a list of all the users.
 ### Capture Data and Train Classifier
->![homepage](https://i.ibb.co/JvhvSFv/opencam.png)
+>![homepage](https://i.ibb.co/JvhvSFv/opencam.png)<br>
 a webcam window will popup and start detecting if the person in the camera
 matches the selected user.
 
