@@ -6,7 +6,7 @@ def main_app(name):
         face_cascade = cv2.CascadeClassifier('./data/haarcascade_frontalface_default.xml')
         recognizer = cv2.face.LBPHFaceRecognizer_create()
         recognizer.read(f"./data/classifiers/{name}_classifier.xml")
-        cap = cv2.VideoCapture(1)
+        cap = cv2.VideoCapture(0)
 
         while True:
             ret, frame = cap.read()
