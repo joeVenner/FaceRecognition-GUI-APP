@@ -19,16 +19,16 @@
   
 # Installation
 
-Install the requirements .
+1 : Install the requirements .
 
 ```sh
 $ pip install -r reqs.txt
 ```
-[Download](https://www.mediafire.com/folder/a17rjtfzq8yne/) Used Models for Age, Gender and Emotion recognition
+2 : [Download](https://www.mediafire.com/folder/a17rjtfzq8yne/) Used Models for Age, Gender and Emotion recognition
 
 - [Download](https://www.mediafire.com/folder/a17rjtfzq8yne/) all those files and put them in data folder 
 
-Run The App 
+3 : Run The App 
 
 ```sh
 $ python app-gui.py
