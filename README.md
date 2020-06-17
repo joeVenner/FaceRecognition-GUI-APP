@@ -31,7 +31,7 @@ Capture Data From the face then train the classifier<br>
 ![page2](https://i.ibb.co/D8JgYhN/capandtraindata.png)<br>
 
 ### Users List<br>
-List of all the users.
+List of all the users<br>
 ![page3](https://i.ibb.co/1KwfVVV/dropdown.png)<br>
 
 ### Recognition <br>
