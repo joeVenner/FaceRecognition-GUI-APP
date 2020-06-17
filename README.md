@@ -3,7 +3,7 @@
 
 [![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://www.youtube.com/channel/UCKvgGs-ALhvOq9u95PHXHNw)
 
-[![JoeVenner](https://i.ibb.co/5LnjN5H/image-processing20190927-14434-1qyn8ix.gif)](https://www.youtube.com/channel/UCKvgGs-ALhvOq9u95PHXHNw)
+
 
 # A very Simple Gui app for Face Detection 
 
@@ -13,7 +13,8 @@
 
 #  New Features!
 
-  - Improve GUI
+  - Add Emotion detection
+  - Add Age and Gender Prediction
 
 # APP GUI
 
@@ -21,21 +22,23 @@
 >![homepage](https://i.ibb.co/c62qvR2/home-page.png)
 
 ### Add a User 
->![homepage](https://i.ibb.co/t8gdq6s/adduser.png)<br>
-You should add the user name you want to train a classifier for 
+>![page1](https://i.ibb.co/t8gdq6s/adduser.png)<br>
+Add the user you want to train a classifier for 
 
 ### Capture Data and Train Classifier
->![homepage](https://i.ibb.co/D8JgYhN/capandtraindata.png)<br>
-After adding user, now we should get enough data from the user<br> 
-by pressing capture button, a webcam window will pop up and start capturing<br> 
-after it's done capturing now we should start Training the classifier.
-### List of Our Users
->![homepage](https://i.ibb.co/1KwfVVV/dropdown.png)
-<br>here we have a list of all the users.
-### Capture Data and Train Classifier
->![homepage](https://i.ibb.co/JvhvSFv/opencam.png)<br>
-a webcam window will popup and start detecting if the person in the camera<br> 
-matches the selected user.
+>![page2](https://i.ibb.co/D8JgYhN/capandtraindata.png)<br>
+Capture Data From the face then train the classifier
+### Users List
+>![page3](https://i.ibb.co/1KwfVVV/dropdown.png)
+List of all the users.
+### Recognition 
+>![page4](https://i.ibb.co/sCtgDDC/4page.png)<br>
+A webcam window will popup and start recognition proccess
+![Face Recognition](https://i.ibb.co/bNpC5wR/jack.png)
+![emotion](https://i.ibb.co/F7pdtjZ/emotion.png)
+![Age and Gender](https://i.ibb.co/9q1L7sD/age.png)
+
+
 
 
 
@@ -54,7 +57,7 @@ Run The App ...
 ```sh
 $ python app-gui.py
 ```
-
+Author: [JoeVenner](mailto:ylafrimi@gmail.com)
 **Free Software, Hell Yeah!**
 
 
