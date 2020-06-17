@@ -19,20 +19,20 @@
 # APP GUI
 
 ### Home Page
->![homepage](https://i.ibb.co/c62qvR2/home-page.png)
+![homepage](https://i.ibb.co/c62qvR2/home-page.png)
 
 ### Add a User 
->![page1](https://i.ibb.co/t8gdq6s/adduser.png)<br>
+![page1](https://i.ibb.co/t8gdq6s/adduser.png)<br>
 Add the user you want to train a classifier for 
 
 ### Capture Data and Train Classifier
->![page2](https://i.ibb.co/D8JgYhN/capandtraindata.png)<br>
+![page2](https://i.ibb.co/D8JgYhN/capandtraindata.png)<br>
 Capture Data From the face then train the classifier
 ### Users List
->![page3](https://i.ibb.co/1KwfVVV/dropdown.png)
+![page3](https://i.ibb.co/1KwfVVV/dropdown.png)<br>
 List of all the users.
 ### Recognition 
->![page4](https://i.ibb.co/sCtgDDC/4page.png)<br>
+![page4](https://i.ibb.co/sCtgDDC/4page.png)<br>
 A webcam window will popup and start recognition proccess
 ![Face Recognition](https://i.ibb.co/bNpC5wR/jack.png)
 ![emotion](https://i.ibb.co/F7pdtjZ/emotion.png)
