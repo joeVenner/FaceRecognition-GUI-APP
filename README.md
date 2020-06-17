@@ -21,22 +21,25 @@
 ### Home Page
 ![homepage](https://i.ibb.co/c62qvR2/home-page.png)
 
-### Add a User 
+### Add a User <br>
+Add the user you want to train a classifier for <br>
 ![page1](https://i.ibb.co/t8gdq6s/adduser.png)<br>
-Add the user you want to train a classifier for 
 
-### Capture Data and Train Classifier
+
+### Capture Data and Train Classifier<br>
+Capture Data From the face then train the classifier<br>
 ![page2](https://i.ibb.co/D8JgYhN/capandtraindata.png)<br>
-Capture Data From the face then train the classifier
-### Users List
-![page3](https://i.ibb.co/1KwfVVV/dropdown.png)<br>
+
+### Users List<br>
 List of all the users.
-### Recognition 
+![page3](https://i.ibb.co/1KwfVVV/dropdown.png)<br>
+
+### Recognition <br>
+A webcam window will popup and start recognition proccess<br>
 ![page4](https://i.ibb.co/sCtgDDC/4page.png)<br>
-A webcam window will popup and start recognition proccess
-![Face Recognition](https://i.ibb.co/bNpC5wR/jack.png)
-![emotion](https://i.ibb.co/F7pdtjZ/emotion.png)
-![Age and Gender](https://i.ibb.co/9q1L7sD/age.png)
+![Face Recognition](https://i.ibb.co/bNpC5wR/jack.png)<br>
+![emotion](https://i.ibb.co/F7pdtjZ/emotion.png)<br>
+![Age and Gender](https://i.ibb.co/9q1L7sD/age.png)<br>
 
 
 
