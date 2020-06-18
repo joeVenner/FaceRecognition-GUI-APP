@@ -1,5 +1,4 @@
 import cv2
-import pafy
 from mtcnn.mtcnn import MTCNN
 from keras.models import load_model
 from keras.preprocessing.image import img_to_array
@@ -8,11 +7,7 @@ import numpy as np
 
 
 
-url = 'https://www.youtube.com/watch?v=d2GBO_QjRlo'
-vpafy = pafy.new(url)
-play = vpafy.getbest(preftype="mp4")
-
-frame = cv2.VideoCapture(play.url)
+frame = cv2.VideoCapture(0)
 
 detector= MTCNN()
 
