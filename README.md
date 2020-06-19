@@ -14,7 +14,7 @@
 #  New Features!
 
   - Add Emotion detection
-  - Add Age and Gender Prediction
+  - Fixed image loading in Linux 
   
   
 # Installation
@@ -24,11 +24,8 @@
 ```sh
 $ pip install -r reqs.txt
 ```
-2 : [Download](https://www.mediafire.com/folder/a17rjtfzq8yne/) Used Models for Age, Gender and Emotion recognition
 
-> [Download](https://www.mediafire.com/folder/a17rjtfzq8yne/) all those files and put them in data folder 
-
-3 : Run The App 
+2 : Run The App 
 
 ```sh
 $ python app-gui.py
