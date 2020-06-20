@@ -22,7 +22,7 @@
 1 : Install the requirements .
 
 ```sh
-$ pip install -r reqs.txt
+$ pip install -r  requirements.txt
 ```
 
 2 : Run The App 
