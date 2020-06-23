@@ -8,7 +8,7 @@ def start_capture(name):
         try:
             os.makedirs(path)
         except:
-            return
+            print('Directory Already Created')
         vid = cv2.VideoCapture(0)
         while True:
 
