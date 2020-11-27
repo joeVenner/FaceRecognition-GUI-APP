@@ -2,7 +2,6 @@
 
 
 [![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://www.youtube.com/channel/UCKvgGs-ALhvOq9u95PHXHNw)
-[![HitCount](http://hits.dwyl.com/joeVenner/FaceRecognition-GUI-APP.svg)](http://hits.dwyl.com/joeVenner/FaceRecognition-GUI-APP)
 
 
 # A very Simple Gui app for Face Detection 
