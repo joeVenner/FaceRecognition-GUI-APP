@@ -56,7 +56,7 @@ def emotion():
 
     while True:
         ret, img = frame.read()
-        img2 = cv2.imread("./data/emojis/sad.png")
+        /*img2 = cv2.imread("./data/emojis/sad.png")*/
         gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
         face = face_cascade.detectMultiScale(image=gray, scaleFactor=1.3, minNeighbors=5)
 
@@ -80,10 +80,4 @@ def emotion():
                 break
     cv2.destroyAllWindows()
 
-    # img1 = cv2.imread('Desert.jpg')
-    # img2 = cv2.imread('Penguins.jpg')
-    #
-    # img3 = img1.copy()
-    # # replace values at coordinates (100, 100) to (399, 399) of img3 with region of img2
-    # img3[100:400, 100:400, :] = img2[100:400, 100:400, :]
-    # cv2.imshow('Result1', img3)
+ 
