@@ -5,7 +5,7 @@ import tkinter as tk
 from tkinter import font as tkfont
 from tkinter import messagebox,PhotoImage
 #from PIL import ImageTk, Image
-#from gender_prediction import emotion,ageAndgender
+from gender_prediction import emotion,ageAndgender
 names = set()
 
 
@@ -165,7 +165,7 @@ class PageThree(tk.Frame):
             messagebox.showerror("ERROR", "No enough Data, Capture at least 300 images!")
             return
         train_classifer(self.controller.active_name)
-        messagebox.showinfo("SUCCESS", "The modele has been successfully trained!")
+        messagebox.showinfo("SUCCESS", "The model has been successfully trained!")
         self.controller.show_frame("PageFour")
 
 
@@ -188,11 +188,12 @@ class PageFour(tk.Frame):
 
     def openwebcam(self):
         main_app(self.controller.active_name)
-    #def gender_age_pred(self):
-     #  ageAndgender()
-    #def emot(self):
-     #   emotion()
-
+    '''
+    def gender_age_pred(self):
+       ageAndgender()
+    def emot(self):
+        emotion()
+'''
 
 
 app = MainUI()
