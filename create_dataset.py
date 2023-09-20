@@ -21,7 +21,7 @@ def start_capture(name):
                 cv2.putText(img, "Face Detected", (x, y-5), cv2.FONT_HERSHEY_SIMPLEX, 0.8, (0, 0, 255))
                 cv2.putText(img, str(str(num_of_images)+" images captured"), (x, y+h+20), cv2.FONT_HERSHEY_SIMPLEX, 0.8, (0, 0, 255))
                 new_img = img[y:y+h, x:x+w]
-            cv2.imshow("FaceDetection", img)
+            cv2.imshow("Face Detection", img)
             key = cv2.waitKey(1) & 0xFF
 
 
@@ -63,19 +63,19 @@ def take_video(name, video):
             cv2.putText(img, "Face Detected", (x, y-5), cv2.FONT_HERSHEY_SIMPLEX, 0.8, (0, 0, 255))
             cv2.putText(img, str(str(num_of_images)+" images captured"), (x, y+h+20), cv2.FONT_HERSHEY_SIMPLEX, 0.8, (0, 0, 255))
             new_img = img[y:y+h, x:x+w]
-            cv2.imshow("FaceDetection", img)
-            key = cv2.waitKey(1) & 0xFF
-            try :
-                cv2.imwrite(str(path+"/"+str(num_of_images)+name+".jpg"), new_img)
-                num_of_images += 1
-            except :
+        cv2.imshow("Face Detection", img)
+        key = cv2.waitKey(1) & 0xFF
+        try :
+            cv2.imwrite(str(path+"/"+str(num_of_images)+name+".jpg"), new_img)
+            num_of_images += 1
+        except :
 
-                pass
-            if key == ord("q") or key == 27 or num_of_images > 300: #take 300 frames
-                break
-        cv2.destroyAllWindows()
-        return num_of_images
+            pass
+        if key == ord("q") or key == 27 or num_of_images > 300: #take 300 frames
+            break
+    vid.release()
+    cv2.destroyAllWindows()
     return num_of_images
 
 
-take_video('tho1', 'data\WIN_20230920_07_56_11_Pro.mp4')
+#take_video('tho1', 'data\WIN_20230920_07_56_11_Pro.mp4')
