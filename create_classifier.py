@@ -38,3 +38,4 @@ def train_classifer(name):
     clf.train(faces, ids)
     clf.write("./data/classifiers/"+name+"_classifier.xml")
 
+#train_classifer('tho1')

@@ -5,7 +5,7 @@ import tkinter as tk
 from tkinter import font as tkfont
 from tkinter import messagebox,PhotoImage
 #from PIL import ImageTk, Image
-#from gender_prediction import emotion,ageAndgender
+from gender_prediction import emotion,ageAndgender
 names = set()
 
 
@@ -64,7 +64,7 @@ class StartPage(tk.Frame):
             img.grid(row=0, column=1, rowspan=4, sticky="nsew")
             label = tk.Label(self, text="        Home Page        ", font=self.controller.title_font,fg="#263942")
             label.grid(row=0, sticky="ew")
-            button1 = tk.Button(self, text="   Add a User  ", fg="#ffffff", bg="#263942",command=lambda: self.controller.show_frame("PageOne"))
+            button1 = tk.Button(self, text="   Sign up  ", fg="#ffffff", bg="#263942",command=lambda: self.controller.show_frame("PageOne"))
             button2 = tk.Button(self, text="   Check a User  ", fg="#ffffff", bg="#263942",command=lambda: self.controller.show_frame("PageTwo"))
             button3 = tk.Button(self, text="Quit", fg="#263942", bg="#ffffff", command=self.on_closing)
             button1.grid(row=1, column=0, ipady=3, ipadx=7)
@@ -90,8 +90,10 @@ class PageOne(tk.Frame):
         self.user_name.grid(row=0, column=1, pady=10, padx=10)
         self.buttoncanc = tk.Button(self, text="Cancel", bg="#ffffff", fg="#263942", command=lambda: controller.show_frame("StartPage"))
         self.buttonext = tk.Button(self, text="Next", fg="#ffffff", bg="#263942", command=self.start_training)
+        self.buttonclear = tk.Button(self, text="Clear", command=self.clear, fg="#ffffff", bg="#263942")
         self.buttoncanc.grid(row=1, column=0, pady=10, ipadx=5, ipady=4)
         self.buttonext.grid(row=1, column=1, pady=10, ipadx=5, ipady=4)
+        self.buttonclear.grid(row=1, ipadx=5, ipady=4, column=2, pady=10)
     def start_training(self):
         global names
         if self.user_name.get() == "None":
@@ -108,6 +110,9 @@ class PageOne(tk.Frame):
         self.controller.active_name = name
         self.controller.frames["PageTwo"].refresh_names()
         self.controller.show_frame("PageThree")
+        
+    def clear(self):
+        self.user_name.delete(0, 'end')
 
 
 class PageTwo(tk.Frame):
@@ -116,17 +121,31 @@ class PageTwo(tk.Frame):
         tk.Frame.__init__(self, parent)
         global names
         self.controller = controller
-        tk.Label(self, text="Select user", fg="#263942", font='Helvetica 12 bold').grid(row=0, column=0, padx=10, pady=10)
+        tk.Label(self, text="Enter your username", fg="#263942", font='Helvetica 12 bold').grid(row=0, column=0, padx=10, pady=10)
+        self.user_name = tk.Entry(self, borderwidth=3, bg="lightgrey", font='Helvetica 11')
+        self.user_name.grid(row=0, column=1, pady=10, padx=10)
         self.buttoncanc = tk.Button(self, text="Cancel", command=lambda: controller.show_frame("StartPage"), bg="#ffffff", fg="#263942")
-        self.menuvar = tk.StringVar(self)
-        self.dropdown = tk.OptionMenu(self, self.menuvar, *names)
-        self.dropdown.config(bg="lightgrey")
-        self.dropdown["menu"].config(bg="lightgrey")
-        self.buttonext = tk.Button(self, text="Next", command=self.nextfoo, fg="#ffffff", bg="#263942")
-        self.dropdown.grid(row=0, column=1, ipadx=8, padx=10, pady=10)
+        self.buttonclear = tk.Button(self, text="Clear", command=self.clear, fg="#ffffff", bg="#263942")
+        #self.menuvar = tk.StringVar(self)
+        #self.dropdown = tk.OptionMenu(self, self.menuvar, *names)
+        #self.dropdown.config(bg="lightgrey")
+        #self.dropdown["menu"].config(bg="lightgrey")
+        self.buttonext = tk.Button(self, text="Next", command=self.next_foo, fg="#ffffff", bg="#263942")
+        #self.dropdown.grid(row=0, column=1, ipadx=8, padx=10, pady=10)
         self.buttoncanc.grid(row=1, ipadx=5, ipady=4, column=0, pady=10)
         self.buttonext.grid(row=1, ipadx=5, ipady=4, column=1, pady=10)
-
+        self.buttonclear.grid(row=1, ipadx=5, ipady=4, column=2, pady=10)
+        
+    def next_foo(self):
+        if self.user_name.get() == 'None':
+            messagebox.showerror("ERROR", "Name cannot be 'None'")
+            return
+        self.controller.active_name = self.user_name.get()
+        self.controller.show_frame("PageFour")  
+        
+    def clear(self):
+        self.user_name.delete(0, 'end')
+'''
     def nextfoo(self):
         if self.menuvar.get() == "None":
             messagebox.showerror("ERROR", "Name cannot be 'None'")
@@ -140,7 +159,7 @@ class PageTwo(tk.Frame):
         self.dropdown['menu'].delete(0, 'end')
         for name in names:
             self.dropdown['menu'].add_command(label=name, command=tk._setit(self.menuvar, name))
-
+'''
 class PageThree(tk.Frame):
 
     def __init__(self, parent, controller):
@@ -162,10 +181,10 @@ class PageThree(tk.Frame):
 
     def trainmodel(self):
         if self.controller.num_of_images < 300:
-            messagebox.showerror("ERROR", "No enough Data, Capture at least 300 images!")
+            messagebox.showerror("ERROR", "Not enough Data, Capture at least 300 images!")
             return
         train_classifer(self.controller.active_name)
-        messagebox.showinfo("SUCCESS", "The modele has been successfully trained!")
+        messagebox.showinfo("SUCCESS", "The model has been successfully trained!")
         self.controller.show_frame("PageFour")
 
 
@@ -188,14 +207,16 @@ class PageFour(tk.Frame):
 
     def openwebcam(self):
         main_app(self.controller.active_name)
-    #def gender_age_pred(self):
-     #  ageAndgender()
-    #def emot(self):
-     #   emotion()
-
+        
+    '''
+    def gender_age_pred(self):
+       ageAndgender()
+    def emot(self):
+        emotion()
+'''
 
 
 app = MainUI()
-app.iconphoto(False, tk.PhotoImage(file='icon.ico'))
+app.iconphoto(True, tk.PhotoImage(file='icon.ico'))
 app.mainloop()
 
