@@ -126,12 +126,12 @@ class PageTwo(tk.Frame):
         self.user_name.grid(row=0, column=1, pady=10, padx=10)
         self.buttoncanc = tk.Button(self, text="Cancel", command=lambda: controller.show_frame("StartPage"), bg="#ffffff", fg="#263942")
         self.buttonclear = tk.Button(self, text="Clear", command=self.clear, fg="#ffffff", bg="#263942")
-        #self.menuvar = tk.StringVar(self)
-        #self.dropdown = tk.OptionMenu(self, self.menuvar, *names)
-        #self.dropdown.config(bg="lightgrey")
-        #self.dropdown["menu"].config(bg="lightgrey")
+        self.menuvar = tk.StringVar(self)
+        self.dropdown = tk.OptionMenu(self, self.menuvar, *names)
+        self.dropdown.config(bg="lightgrey")
+        self.dropdown["menu"].config(bg="lightgrey")
         self.buttonext = tk.Button(self, text="Next", command=self.next_foo, fg="#ffffff", bg="#263942")
-        #self.dropdown.grid(row=0, column=1, ipadx=8, padx=10, pady=10)
+        self.dropdown.grid(row=0, column=1, ipadx=8, padx=10, pady=10)
         self.buttoncanc.grid(row=1, ipadx=5, ipady=4, column=0, pady=10)
         self.buttonext.grid(row=1, ipadx=5, ipady=4, column=1, pady=10)
         self.buttonclear.grid(row=1, ipadx=5, ipady=4, column=2, pady=10)
@@ -145,7 +145,7 @@ class PageTwo(tk.Frame):
         
     def clear(self):
         self.user_name.delete(0, 'end')
-'''
+        
     def nextfoo(self):
         if self.menuvar.get() == "None":
             messagebox.showerror("ERROR", "Name cannot be 'None'")
@@ -159,7 +159,7 @@ class PageTwo(tk.Frame):
         self.dropdown['menu'].delete(0, 'end')
         for name in names:
             self.dropdown['menu'].add_command(label=name, command=tk._setit(self.menuvar, name))
-'''
+            
 class PageThree(tk.Frame):
 
     def __init__(self, parent, controller):
